@@ -2,7 +2,6 @@ package com.stepGeneratorclass;
 
 import java.util.HashMap;
 
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,18 +9,17 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
 
-public class Bdd_assi2 extends Commonsteps {
+public class Bdd_assi3 extends Commonsteps {
 	
-
-	@Given("User click on api link")
-	public void user_click_on_api_link() {
+	@Given("user open link")
+	public void user_open_link() {
 	    // Write code here that turns the phrase above into concrete actions
-		response=RestAssured.given().when().log().all().get("https://api.ratesapi.io/api/latest?base=USD&symbols=GBP");
+		response=RestAssured.given().when().log().all().get("https://api.ratesapi.io/api/latest?symbols=GBP");
 		
 	}
 
-	@When("get response")
-	public void get_response() {
+	@When("received response")
+	public void received_response() {
 	    // Write code here that turns the phrase above into concrete actions
 		response_rec=response.getStatusCode();
 		response.prettyPrint();
@@ -29,8 +27,8 @@ public class Bdd_assi2 extends Commonsteps {
 	    
 	}
 
-	@Then("verify response")
-	public void verify_response() {
+	@Then("log response")
+	public void log_response() {
 	    // Write code here that turns the phrase above into concrete actions
 		if(response_rec==200)
 		{
@@ -45,7 +43,6 @@ public class Bdd_assi2 extends Commonsteps {
 			System.out.println("error occured");
 		}
 	}
-
 
 
 }
