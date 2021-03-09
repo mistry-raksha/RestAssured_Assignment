@@ -8,7 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		features="Features",
-		glue={"com.stepGeneratorclass"}
+		glue={"com.stepGeneratorclass"},
+		tags=("@assi2")
 				
 		)
 @Test

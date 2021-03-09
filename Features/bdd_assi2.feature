@@ -16,12 +16,11 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@framework
-Feature:  ratesapi
-
-
-  Scenario: Title of your scenario
-    Given User click on link
-    When response recieved
-    Then validate response
+@assi2
+Feature: ratesapi
+  
+  Scenario: bdd_assi
+    Given  User click on api link
+    When get response
+    Then verify response
  
