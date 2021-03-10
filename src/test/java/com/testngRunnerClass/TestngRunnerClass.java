@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features="Features",
 		glue={"com.stepGeneratorclass"}
-		//tags=("@assign3")
+		
 				
 		)
 @Test
