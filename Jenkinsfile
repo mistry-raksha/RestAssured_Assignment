@@ -10,7 +10,7 @@ pipeline {
          steps {
          
             // Get some code from a GitHub repository
-            git 'https://github.com/mistry-raksha/Jenkins'
+            git 'https://github.com/mistry-raksha/RestAssured_Assignment'
             
             // To run Maven on a Windows agent, use
 
