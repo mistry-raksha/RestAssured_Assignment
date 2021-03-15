@@ -8,6 +8,8 @@ pipeline {
    stages {
       stage('Build') {
          steps {
+          
+         
          
             // Get some code from a GitHub repository
             git 'https://github.com/mistry-raksha/RestAssured_Assignment'
@@ -15,6 +17,8 @@ pipeline {
             // To run Maven on a Windows agent, use
 
              bat "mvn -Dmaven.test.failure.ignore=true clean package"
+             
+             echo 'Build Started'
 
 			 }
 		}	
